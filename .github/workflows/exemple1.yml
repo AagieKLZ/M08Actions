@@ -1,0 +1,19 @@
+name: Exemple 1. Add to project
+
+on:
+    issues:
+        types:
+            - opened
+
+jobs:
+    add-to-project:
+        name: Add issue to project
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/add-to-project@RELEASE_VERSION
+              with:
+                project: My project
+                column: My column
+                token: ${{ secrets.GITHUB_TOKEN }}
+                labeled: bug, needs triage
+                label-operator: OR
