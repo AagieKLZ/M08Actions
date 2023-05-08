@@ -10,7 +10,7 @@ jobs:
         name: Add issue to project
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/add-to-project@RELEASE_VERSION
+            - uses: actions/add-to-project
               with:
                 project: My project
                 column: My column
